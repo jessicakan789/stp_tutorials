@@ -1,6 +1,6 @@
 import logging
 
-# Use logging rather then print statements to track workflows and record exceptions
+# Use logging rather than print statements to track workflows and record exceptions
 logging.basicConfig(level=logging.DEBUG,  # DEBUG, INFO, WARN, ERROR
                     format="%(asctime)s [%(levelname)s] %(message)s",
                     handlers=[logging.FileHandler('chunking.log'),
@@ -15,7 +15,6 @@ def chunk_string(query_sequence, chuk_by):
     :return:
     """
     logging.info("Chunk {} into blocks of {}".format(query_sequence, str(chuk_by)))
-    # return " ".join([query_sequence[i:i+chuk_by] for i in range(0, len(query_sequence), chuk_by)])
 
     my_list = []
     while query_sequence:

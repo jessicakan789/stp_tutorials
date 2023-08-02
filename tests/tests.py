@@ -1,6 +1,6 @@
 from . import string_slice
 from . import sum_odd_integers
-from . import chunking
+from . import exercise_1_4
 
 
 def test_string_slice():
