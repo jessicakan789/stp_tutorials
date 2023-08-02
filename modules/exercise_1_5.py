@@ -4,12 +4,14 @@ Module that contains functions for validating DNA strings and transcribing DNA s
 
 # Import modules
 import logging
-import exceptions
+from . import exceptions
+from pathlib import Path
 
 # Use logging rather than print statements to track workflows and record exceptions.py
-logging.basicConfig(level=logging.INFO,  # DEBUG, INFO, WARN, ERROR
+current_directory = str(Path.cwd())
+logging.basicConfig(level=logging.DEBUG,  # DEBUG, INFO, WARN, ERROR
                     format="%(asctime)s [%(levelname)s] %(message)s",
-                    handlers=[logging.FileHandler('transribe_n_translate.log'),
+                    handlers=[logging.FileHandler(f"{current_directory}/transribe.log"),
                               logging.StreamHandler()],)
 
 

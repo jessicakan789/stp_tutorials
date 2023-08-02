@@ -3,12 +3,14 @@ Module that reverse complements DNA strings
 """
 
 import logging
-import exercise_1_5
+from . import exercise_1_5
+from pathlib import Path
 
 # Use logging rather than print statements to track workflows and record exceptions.py
-logging.basicConfig(level=logging.INFO,  # DEBUG, INFO, WARN, ERROR
+current_directory = str(Path.cwd())
+logging.basicConfig(level=logging.DEBUG,  # DEBUG, INFO, WARN, ERROR
                     format="%(asctime)s [%(levelname)s] %(message)s",
-                    handlers=[logging.FileHandler('reverse_complement.log'),
+                    handlers=[logging.FileHandler(f"{current_directory}reverse_complement.log"),
                               logging.StreamHandler()],)
 
 

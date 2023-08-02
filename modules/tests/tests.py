@@ -1,9 +1,9 @@
-from examples import string_slice
-from examples import sum_odd_integers
-from examples import exercise_1_4
-from examples import exercise_1_5
-from examples import exercise_2_1
-from examples import exercise_2_3
+from modules import string_slice
+from modules import sum_odd_integers
+from modules import exercise_1_4
+from modules import exercise_1_5
+from modules import exercise_2_1
+from modules import exercise_2_3
 
 
 def test_string_slice():
