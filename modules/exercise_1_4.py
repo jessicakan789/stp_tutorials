@@ -1,12 +1,13 @@
 # Import modules
 import logging
 from pathlib import Path
+import sys
 
 # Use logging rather than print statements to track workflows and record exceptions.py
-current_directory = str(Path.cwd())
+current_directory = str(Path(sys.argv[0]).resolve().parent)
 logging.basicConfig(level=logging.DEBUG,  # DEBUG, INFO, WARN, ERROR
                     format="%(asctime)s [%(levelname)s] %(message)s",
-                    handlers=[logging.FileHandler(f"{current_directory}/chunking.log"),
+                    handlers=[logging.FileHandler(f"{current_directory}/logs/chunking.log"),
                               logging.StreamHandler()],)
 
 
