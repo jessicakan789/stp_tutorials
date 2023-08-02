@@ -6,10 +6,9 @@ Module that contains functions for validating DNA strings and transcribing DNA s
 import logging
 import exceptions
 from pathlib import Path
-import sys
 
 # Use logging rather than print statements to track workflows and record exceptions.py
-current_directory = str(Path(sys.argv[0]).resolve().parent)
+current_directory = str(Path(__file__).resolve().parent)
 logging.basicConfig(level=logging.DEBUG,  # DEBUG, INFO, WARN, ERROR
                     format="%(asctime)s [%(levelname)s] %(message)s",
                     handlers=[logging.FileHandler(f"{current_directory}/logs/transribe.log"),
