@@ -1,6 +1,6 @@
 import logging
 
-# Use logging rather then print statements to track workflows and record exceptions
+# Use logging rather then print statements to track workflows and record exceptions.py
 logging.basicConfig(level=logging.ERROR,  # DEBUG, INFO, WARN, ERROR
                     format="%(asctime)s [%(levelname)s] %(message)s",
                     handlers=[logging.FileHandler('string_slice.log'),

@@ -1,6 +1,9 @@
-from . import string_slice
-from . import sum_odd_integers
-from . import exercise_1_4
+from examples import string_slice
+from examples import sum_odd_integers
+from examples import exercise_1_4
+from examples import exercise_1_5
+from examples import exercise_2_1
+from examples import exercise_2_3
 
 
 def test_string_slice():
@@ -17,6 +20,6 @@ def test_sum_odd_integers():
 
 def test_chunking():
     chunk_string = "aggagtaagcccttgcaactggaaatacacccattg"
-    assert chunking.chunk_string(chunk_string, 3) == "agg agt aag ccc ttg caa ctg gaa ata cac cca ttg"
-    assert chunking.chunk_string(chunk_string, 5) == "aggag taagc ccttg caact ggaaa tacac ccatt g"
+    assert exercise_1_4.chunk_string(chunk_string, 3) == "agg agt aag ccc ttg caa ctg gaa ata cac cca ttg"
+    assert exercise_1_4.chunk_string(chunk_string, 5) == "aggag taagc ccttg caact ggaaa tacac ccatt g"
 

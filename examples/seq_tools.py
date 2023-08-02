@@ -4,14 +4,14 @@ Module that contains an object for manipulating DNA strings
 
 import logging
 
-# Use logging rather than print statements to track workflows and record exceptions
+# Use logging rather than print statements to track workflows and record exceptions.py
 logging.basicConfig(level=logging.INFO,  # DEBUG, INFO, WARN, ERROR
                     format="%(asctime)s [%(levelname)s] %(message)s",
                     handlers=[logging.FileHandler('transribe_n_translate.log'),
                               logging.StreamHandler()],)
 
 
-# Custom exceptions
+# Custom exceptions.py
 class SequenceError(Exception):
     pass
 
@@ -60,13 +60,6 @@ class SequenceTools:
         complement = "".join([self.base_complement[base] for base in reverse_bases])
 
         return complement
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
