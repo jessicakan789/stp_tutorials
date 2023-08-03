@@ -1,9 +1,7 @@
-from ..modules import string_slice
-from ..modules import sum_odd_integers
-from ..modules import exercise_1_4
-from modules import exercise_1_5
-from modules import exercise_2_1
-from modules import exercise_2_3
+from pathlib import Path
+import sys
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+from STP_Tutorials.modules import string_slice, sum_odd_integers, exercise_1_4
 
 
 def test_string_slice():

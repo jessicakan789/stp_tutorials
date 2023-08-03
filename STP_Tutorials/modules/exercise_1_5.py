@@ -4,7 +4,7 @@ Module that contains functions for validating DNA strings and transcribing DNA s
 
 # Import modules
 import logging
-import exceptions
+from . import exceptions
 from pathlib import Path
 
 # Use logging rather than print statements to track workflows and record exceptions.py
