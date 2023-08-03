@@ -40,11 +40,25 @@ def complement(dna_string):
     return "".join([{"G": "C", "T": "A", "A": "T", "C": "G"}[base] for base in list(dna_string)])
 
 
+def reverse_complement(dna_seq):
+    """
+    Reverse complement a DNA string using the
+    :param dna_seq:
+    :return: (str)
+    """
+    reverse_seq = reverse(dna_seq)
+    complement_sequence = (complement(reverse_seq))
+    return complement_sequence
+
+
 if __name__ == '__main__':
     """
     This code allows me to directly call the script and use a test string e.g. the one below
     """
     dna_sequence = "GCTGAGACTTCCTGGACGGGGGACAGGCTGTGGGGTTTCTCAGATAACTGGGCCCCTGCGCTCAGGAGGC"
-    reverse = reverse(dna_sequence)
-    print(reverse)
-    print(complement(reverse))
+    reverse_sequence = reverse(dna_sequence)
+    print(reverse_sequence)
+    print("\n")
+    print(complement(reverse_sequence))
+    print("\n")
+    print(reverse_complement(dna_sequence))

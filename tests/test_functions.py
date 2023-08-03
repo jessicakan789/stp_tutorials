@@ -32,7 +32,7 @@ def test_exercise_1_5():
              """
     transcript = exercise_1_5.transcribe(chunk_string)
     chunked = exercise_2_1.chunk_string(transcript, 10, 6)
-    assert "1 gcugagacuu ccuggacggg ggacaggcug ugggguuucu cagauaacug ggccccugcg" in chunked
+    assert """1 gcugagacuu ccuggacggg ggacaggcug ugggguuucu cagauaacug ggccccugcg\n""" in chunked
 
 
 def test_exercise_1_5_non_dna_base():
